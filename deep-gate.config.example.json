@@ -1,0 +1,20 @@
+{
+  "_comment": "Optional. Copy to ~/.claude/deep-gate.config.json (or point $DEEP_GATE_CONFIG at it). All fields optional; defaults work with zero config.",
+
+  "cheap_model": "haiku",
+
+  "extra_stakes_keywords": [
+    "usage_ledger",
+    "checkout",
+    "subscription"
+  ],
+
+  "extra_claim_keywords": [
+    "gata",
+    "rezolvat",
+    "fertig",
+    "listo"
+  ],
+
+  "safe_extensions": ["md", "mdx", "markdown", "txt", "rst", "css", "scss", "less"]
+}

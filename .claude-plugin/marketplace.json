@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-deep-gate",
+  "description": "Tiered adversarial refuter gate for Claude Code — verify smarter, not more expensively.",
+  "owner": {
+    "name": "Eugen Popa",
+    "url": "https://github.com/EugenBoss"
+  },
+  "plugins": [
+    {
+      "name": "deep-gate",
+      "description": "Forces a refuter agent before substantive completions, with depth tiered by stakes: skip trivial, cheap model for normal code, full deep refuter for money/prod/data. Includes a /deepmode toggle.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

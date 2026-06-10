@@ -1,0 +1,16 @@
+description = "Set/inspect the deep-gate refuter mode (auto|off|force)"
+prompt = """
+Control the deep-gate refuter mode. Target file: `~/.claude/.deep-mode`. Argument: {{args}}
+
+Do this:
+1. If {{args}} is empty -> run `cat ~/.claude/.deep-mode 2>/dev/null || echo auto` and report the current mode plus the three options below. Stop.
+2. If {{args}} is NOT one of auto / off / force -> say it is invalid, show the options, do NOT write. Stop.
+3. Otherwise write it: `printf '%s\\n' "{{args}}" > ~/.claude/.deep-mode` and confirm the new value.
+
+Meanings:
+- auto  (default) — tiered: trivial/doc = skip; normal code = cheap scoped refuter; high-stakes (money/prod/DB/migration/auth/irreversible/cost-number) = full deep refuter.
+- off   — never fire a refuter (max token save; you lose the auto net).
+- force — full deep refuter on EVERY substantive completion (legacy max-safety).
+
+Keep the reply terse.
+"""

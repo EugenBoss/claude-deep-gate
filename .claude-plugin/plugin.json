@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "deep-gate",
+  "version": "0.1.0",
+  "description": "Tiered adversarial refuter gate. Forces a verification agent before substantive completions — but escalates depth by stakes (skip trivial, cheap model for normal code, full deep refuter for money/prod/data). Cuts token cost without losing the catch.",
+  "author": {
+    "name": "Eugen Popa",
+    "url": "https://github.com/EugenBoss"
+  },
+  "homepage": "https://github.com/EugenBoss/claude-deep-gate",
+  "license": "MIT",
+  "keywords": ["verification", "refuter", "cost", "tokens", "quality", "hooks", "stop-hook"],
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/deep-refute-gate.sh\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}
