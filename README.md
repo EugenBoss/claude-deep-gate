@@ -1,5 +1,10 @@
 # claude-deep-gate
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-plugin-7C3AED)](https://docs.claude.com/en/docs/claude-code/plugins)
+![Requires](https://img.shields.io/badge/requires-bash%20%2B%20python3-2ea44f)
+![Hook](https://img.shields.io/badge/hook-Stop-orange)
+
 **Verify smarter, not more expensively.**
 
 A Claude Code [Stop hook](https://docs.claude.com/en/docs/claude-code/hooks) that forces an
